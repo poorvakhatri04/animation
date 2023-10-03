@@ -1,0 +1,47 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    position: relative;
+}
+
+.box {
+    width: 100px;
+    height: 50px;
+    background-color: lightblue;
+    text-align: center;
+    line-height: 50px;
+    border: 2px solid darkblue;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.ball {
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    animation: move-up 2s forwards, bounce 1s infinite 2s;
+}
+
+@keyframes move-up {
+    to {
+        bottom: 100vh;
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(-20px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+}
